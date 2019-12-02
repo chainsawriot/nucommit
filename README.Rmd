@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# nucommit
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of nucommit is to calculate the *N*umbers, *U*nity and *Commit*ment metrics from tweet data (usually collected by rtweet::search_tweet or scrapers such as [twitterscraper](https://github.com/taspinar/twitterscraper)) using the method by Freelon, McIlwain & Clark (2019).
+
+References:
+1. Freelon, D., McIlwain, C., & Clark, M. (2018). Quantifying the power and consequences of social media protest. New Media & Society, 20(3), 990-1011.
+
+## Installation
+
+``` r
+devtools::install_github("chainsawriot/nucommit")
+```
+
+## Example
+
+Some tweets collected by search_tweets("#rstats")
+
+```{r example1}
+library(nucommit)
+library(tibble)
+data(rt)
+rt
+```
+
+Calculate the Numbers time series data
+
+```{r numbers}
+calculate_numbers(rt)
+```
+
+Calculate the Unity time series data
+
+```{r unity}
+calculate_unity(rt)
+```
+
+Calculate the Commitment time series data
+
+```{r commitment}
+calculate_commitment(rt)
+```

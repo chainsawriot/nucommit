@@ -1,0 +1,25 @@
+Package: nucommit
+Title: Calculate The Numbers, Unity And Commitment Time Series
+Version: 0.0.1
+Authors@R: 
+    person(given = "Chung-hong",
+           family = "Chan",
+           role = c("aut", "cre"),
+           email = "chainsawtiney@gmail.com",
+           comment = c(ORCID = "0000-0002-6232-7530"))
+Description: Calculate the numbers, unity and commitment time series from Twitter data according to the method by Freelon, McIlwain & Clark (2016). They are the operationalizations of the WUNC concept (Tilly 1999).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    lubridate,
+    tibble,
+    reldist,
+    stringr,
+    magrittr,
+    purrr,
+    tidyr
+Suggests: 
+    rtweet
+RoxygenNote: 6.1.1
