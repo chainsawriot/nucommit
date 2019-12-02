@@ -5,7 +5,9 @@ nucommit
 
 <!-- badges: start -->
 <!-- badges: end -->
-The goal of nucommit is to calculate the *N*umbers, *U*nity and *Commit*ment metrics from tweet data (usually collected by rtweet::search\_tweet or scrapers such as [twitterscraper](https://github.com/taspinar/twitterscraper))
+The goal of nucommit is to calculate the *N*umbers, *U*nity and *Commit*ment metrics from tweet data (usually collected by rtweet::search\_tweet or scrapers such as [twitterscraper](https://github.com/taspinar/twitterscraper)) using the method by Freelon, McIlwain & Clark (2019).
+
+References: 1. Freelon, D., McIlwain, C., & Clark, M. (2018). Quantifying the power and consequences of social media protest. New Media & Society, 20(3), 990-1011.
 
 Installation
 ------------
