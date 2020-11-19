@@ -1,6 +1,6 @@
 Package: nucommit
 Title: Calculate The Numbers, Unity And Commitment Time Series
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Chung-hong",
            family = "Chan",
@@ -21,5 +21,7 @@ Imports:
     purrr,
     tidyr
 Suggests: 
-    rtweet
+    rtweet,
+    testthat (>= 3.0.0)
 RoxygenNote: 6.1.1
+Config/testthat/edition: 3

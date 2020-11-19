@@ -61,5 +61,5 @@ calculate_commitment <- function(input, after_days = 3) {
     input <- .clean(input)    
     input %>% dplyr::mutate(created_at = lubridate::floor_date(created_at, unit = "day")) %>% dplyr::group_by(created_at, user_id) %>% dplyr::count() %>% dplyr::select(-n) %>% dplyr::ungroup() %>% dplyr::group_by(created_at) %>% tidyr::nest(data = user_id) -> user_hash
     user_hash$commitment <- purrr::map_dbl(1:nrow(user_hash), .windowing_count, user_hash = user_hash, after_days = after_days)
-    user_hash %>% dplyr::ungroup(create_at) %>% dplyr::select(created_at, commitment) %>% dplyr::arrange(created_at)
+    user_hash %>% dplyr::ungroup(created_at) %>% dplyr::select(created_at, commitment) %>% dplyr::arrange(created_at)
 }
